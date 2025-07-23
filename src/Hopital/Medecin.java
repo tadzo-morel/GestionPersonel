@@ -1,25 +1,23 @@
 package Hopital;
 
-public abstract class Medecin extends Personnel{
+import java.util.ArrayList;
+
+public  class Medecin extends Personnel{
 
    public String specialite;
-   public static double nbrePatients;
-   public  double salaire=salaireDeBase+1000*nbrePatients;
+   public ArrayList<Patient> patients=new ArrayList<>();
+//   public double nbrePatients;
+//   public  double salaire=salaireDeBase+1000*nbrePatients;
 
    public Medecin(String nom,String prenom,int age,String matricule,double salaireDeBase,String specialite){
         super(nom,prenom,age,matricule,salaireDeBase);
         this.specialite=specialite;
-        nbrePatients++;
     }
 
     public double calculerSalaire(){
-        return salaire;
+        return salaireDeBase+(1000*patients.size());
     }
-    public String toString(){
-        return "nom: "+this.getNom()+" Prenom: "+this.getPrenom()+" age: "+this.getAge();
-    }
-
-    public void AfficherContrat(){
-       System.out.println("Contract"+specialite);
+    public void afficherContrat(){
+        System.out.println("votre contrat"+super.toString()+" "+specialite);
     }
 }

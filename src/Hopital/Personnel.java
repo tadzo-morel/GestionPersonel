@@ -9,5 +9,8 @@ public abstract class Personnel extends Personne implements Employable {
         this.salaireDeBase=salaireDeBase;
     }
     public abstract double calculerSalaire();
+    public void afficherContrat(){
+        System.out.println("votre contrat"+super.toString()+" matricule "+matricule);
+    }
 
 }

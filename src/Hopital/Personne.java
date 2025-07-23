@@ -1,22 +1,18 @@
 package Hopital;
 
-public abstract class Personne {
-    private  String nom;
-    private String prenom;
-    private int age;
+public class Personne {
+
+    protected   String nom;
+    protected String prenom;
+    protected int age;
+
     public Personne(String nom,String prenom,int age){
         this.nom=nom;
         this.prenom=prenom;
         this.age=age;
     }
-    public String getNom(){
-        return this.nom;
+
+    public String toString(){
+        return "nom: "+nom+" Prenom: "+prenom+" age: "+age;
     }
-    public String getPrenom(){
-        return this.prenom;
-    }
-    public int getAge(){
-        return this.age;
-    }
-    public abstract String toString();
 }

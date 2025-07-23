@@ -1,9 +1,14 @@
 package Hopital;
+public   class Administrateur extends Personnel{
 
-public  abstract class Administrateur extends Personnel{
-    public double salaire=salaireDeBase+500;
-    public Administrateur(String nom,String prenom,int age,String matricule,double salaireDeBase,double salaire){
+    public  final  int prime =500;
+
+    public Administrateur(String nom,String prenom,int age,String matricule,double salaireDeBase){
         super(nom,prenom,age,matricule,salaireDeBase);
-        this.salaire=salaire;
     }
+
+    public double calculerSalaire(){
+        return salaireDeBase+prime;
+    }
+
 }

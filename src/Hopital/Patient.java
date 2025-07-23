@@ -8,10 +8,8 @@ public class Patient extends Personne {
         this.numeroDossier=numeroDossier;
         this.maladie=maladie;
     }
-    public String toString(){
-        return "nom: "+this.getNom()+" Prenom: "+this.getPrenom()+" age: "+this.getAge();
-    }
     public void afficherInfos(){
+        System.out.println(super.toString());
         System.out.println("numero Dossier: "+numeroDossier+" maladie: "+maladie);
     }
 
