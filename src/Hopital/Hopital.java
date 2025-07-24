@@ -33,17 +33,11 @@ public class Hopital {
             P.afficherInfos();
         }
         for(Personnel Ps:personnels){
-//            AjouterPersonnel(Ps);
             System.out.println(Ps.toString());
         }
     }
     public  void sauvegarde(String file){
-//        hopital =new Hopital();
-//        File fichier=new File("M://hopital.txt");
-            try ( BufferedWriter wr=new BufferedWriter(new FileWriter(file,false))){
-//                FileWriter writer=new FileWriter(fichier);
-               // BufferedWriter wr=new BufferedWriter(new FileWriter(file,true));
-//                wr.write("bonjour patients");
+            try ( BufferedWriter wr=new BufferedWriter(new FileWriter(file,true))){
                 System.out.println("Affichage des patients: ");
                 for (Patient p: patients) {
                     wr.write(p.toString());
@@ -54,10 +48,9 @@ public class Hopital {
                     wr.write(pe.toString());
                     wr.newLine();
                 }
-                wr.close();
             }
             catch (IOException e){
-                //e.printStackTrace();
+
             }
         }
 
